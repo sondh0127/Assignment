@@ -2,7 +2,7 @@ package com.oolt.assignment;
 
 import java.time.LocalDate;
 
-public class CreditAccount extends Account {
+public class CreditAccount extends Account implements HasInterest {
 
     private static double debitInterest;
     private static double creditInterest;
@@ -55,7 +55,8 @@ public class CreditAccount extends Account {
 
     @Override
     public void getDetails() {
-        System.out.println("\nAccount owner: " + this.getOwner());
+        System.out.println("\nCreditAccount: ");
+        System.out.println("Account owner: " + this.getOwner());
         System.out.println("Balance: " + this.getBalance());
         System.out.println("Date Created: " + DateUtil.format(this.getDateCreated()));
         System.out.println("Debit Interest: " + getDebitInterest());
@@ -88,14 +89,6 @@ public class CreditAccount extends Account {
         return this.withdraw(converted_amount);
     }
 
-    public void updateBalance() {
-        if (balance > 0) {
-            balance += balance * debitInterest / 100;
-        } else {
-            balance += balance * creditInterest / 100;
-        }
-    }
-
     public LocalDate getDateCreated() {
         return dateCreated;
     }
@@ -104,4 +97,12 @@ public class CreditAccount extends Account {
         return limit;
     }
 
+    @Override
+    public void updateBalance() {
+        if (balance > 0) {
+            balance += balance * debitInterest / 100;
+        } else {
+            balance += balance * creditInterest / 100;
+        }
+    }
 }

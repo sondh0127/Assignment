@@ -1,6 +1,6 @@
 package com.oolt.assignment;
 
-public abstract class Account {
+public abstract class Account{
     protected double balance;
     private String owner;
 

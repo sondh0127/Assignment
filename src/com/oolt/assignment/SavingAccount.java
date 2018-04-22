@@ -2,7 +2,7 @@ package com.oolt.assignment;
 
 import java.time.LocalDate;
 
-public class SavingAccount extends Account {
+public class SavingAccount extends Account implements HasInterest {
 
     private static final double DEFAULT_INTEREST = 7.00;
 
@@ -37,7 +37,8 @@ public class SavingAccount extends Account {
 
     @Override
     public void getDetails() {
-        System.out.println("\nAccount owner: " + this.getOwner());
+        System.out.println("\n- Saving Account:");
+        System.out.println("Account owner: " + this.getOwner());
         System.out.println("Balance: " + this.getBalance());
         System.out.println("Date Created: " + DateUtil.format(this.getDateCreated()));
         System.out.println("Interest: " + getInterest());
@@ -93,7 +94,7 @@ public class SavingAccount extends Account {
         }
         return false;
     }
-
+    @Override
     public void updateBalance() {
         if (checkValidDate()) {
             this.balance += this.balance * interest / 100;

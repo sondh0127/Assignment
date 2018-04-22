@@ -8,6 +8,7 @@ public class CheckingAccount extends Account {
 
     @Override
     public void getDetails() {
+        System.out.println("\n-Checking Account: ");
         System.out.println("Account owner: " + this.getOwner());
         System.out.println("Balance: " + this.getBalance());
     }
