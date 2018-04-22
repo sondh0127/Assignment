@@ -55,7 +55,7 @@ public class CreditAccount extends Account implements HasInterest {
 
     @Override
     public void getDetails() {
-        System.out.println("\nCreditAccount: ");
+        System.out.println("\n- CreditAccount: ");
         System.out.println("Account owner: " + this.getOwner());
         System.out.println("Balance: " + this.getBalance());
         System.out.println("Date Created: " + DateUtil.format(this.getDateCreated()));

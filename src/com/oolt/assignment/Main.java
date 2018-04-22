@@ -19,12 +19,12 @@ public class Main {
         CheckingAccount downcastCheckingAccount = (CheckingAccount) upcastCheckingAccount;
         downcastCheckingAccount.getDetails();
 
-        CheckingAccount annaCheckingAccount = new CheckingAccount("Tim", 30000);
+        CreditAccount cuongCreditAccount = new CreditAccount("Cuong", 4000, "08/04/2017", 30000, 6.5, 2.5);
         System.out.println("\n Part 4:");
         // Create new bank and add all some account to the bank
         Bank bank = new Bank("ACB Bank", "Toronto");
         bank.addAccount(savingAccount);
-        bank.addAccount(annaCheckingAccount);
+        bank.addAccount(cuongCreditAccount);
         bank.addAccount(checkingAccount);
 
         // print all detail of bank
