@@ -22,7 +22,7 @@ public class Main {
         CreditAccount cuongCreditAccount = new CreditAccount("Cuong", 4000, "08/04/2017", 30000, 6.5, 2.5);
         System.out.println("\n Part 4:");
         // Create new bank and add all some account to the bank
-        Bank bank = new Bank("ACB Bank", "Toronto");
+        Bank bank = new Bank("ACB BKBank", "Toronto");
         bank.addAccount(savingAccount);
         bank.addAccount(cuongCreditAccount);
         bank.addAccount(checkingAccount);
@@ -42,7 +42,7 @@ public class Main {
 
 
         //savingAccount demo
-        // setting Date of Bank to 01/04/2018
+        // setting Date of BKBank to 01/04/2018
         DateUtil.changeNow("01/04/2018");
         System.out.println("\nToday: " + DateUtil.format(DateUtil.now));
 
@@ -58,7 +58,7 @@ public class Main {
         heenSavingAccount.getDetails();
         stephenSavingAccount.getDetails();
 
-        // setting Date of Bank to 08/04/2018
+        // setting Date of BKBank to 08/04/2018
         DateUtil.changeNow("08/04/2018");
         System.out.println("\nToday: " + DateUtil.format(DateUtil.now));
 
